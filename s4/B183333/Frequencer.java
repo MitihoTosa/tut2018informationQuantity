@@ -1,4 +1,4 @@
-package s4.B183333; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID. 
+package s4.B183333; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID.
 import java.lang.*;
 import s4.specification.*;
 
@@ -36,7 +36,7 @@ public class Frequencer implements FrequencerInterface{
     }
 
     // I know that here is a potential problem in the declaration.
-    public int subByteFrequency(int start, int length) { 
+    public int subByteFrequency(int start, int length) {
 	// Not yet, but it is not currently used by anyone.
 	return -1;
     }
@@ -51,11 +51,29 @@ public class Frequencer implements FrequencerInterface{
 	    myObject.setTarget("H".getBytes());
 	    freq = myObject.frequency();
 	    System.out.print("\"H\" in \"Hi Ho Hi Ho\" appears "+freq+" times. ");
-	    if(4 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+	    if(4 == freq) { System.out.println("OK"); }
+        else {System.out.println("WRONG"); }
+	}
+	catch(Exception e) {
+	    System.out.println("Exception occurred: STOP");
+	}
+
+    /*
+        エラー発生箇所
+
+    */
+    try {
+	    System.out.println("Error occurs");
+	    myObject = new Frequencer();
+	    myObject.setSpace("aaaaa".getBytes());
+	    myObject.setTarget("aa".getBytes());
+	    freq = myObject.frequency();
+	    System.out.print("\"aa\" in \"aaaaa\" appears "+freq+" times. ");
+	    if(4 == freq) { System.out.println("OK"); }
+        else {System.out.println("WRONG"); }
 	}
 	catch(Exception e) {
 	    System.out.println("Exception occurred: STOP");
 	}
     }
-}	    
-	    
+}
