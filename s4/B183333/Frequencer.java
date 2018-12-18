@@ -58,10 +58,8 @@ public class Frequencer implements FrequencerInterface{
 	    System.out.println("Exception occurred: STOP");
 	}
 
-    /*
-        エラー発生箇所
-
-    */
+    //エラー発生箇所
+    //aaの数を数えているのに，aだけで次の要素がないところまで探索をしているから
     try {
 	    System.out.println("Error occurs");
 	    myObject = new Frequencer();
