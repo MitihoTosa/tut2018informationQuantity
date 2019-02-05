@@ -257,20 +257,15 @@ public class Frequencer implements FrequencerInterface{
                 return -1;
             }
 
-
             int judge = suffixChar.compareTo(targetChar);
-
             //compareToは、その文字の差を出すモノでaとcであれば2を返す。
-
             //System.out.println("judge =" +judge );
-
             if(judge < 0){
                 return -1;
             }else if(judge > 0){
                 return 1;
             }
         }
-
         return 0;
 
     }
@@ -306,7 +301,6 @@ public class Frequencer implements FrequencerInterface{
     	//j = target_start...myTarget[j]
     	//end = target_end...myTarget[end]
 
-
     	//int startIndex = -1;
     	//だから、for文回す。for(int k = 0;k<MyspaceLength-1;k++){
     	//						if(targetCompare(k,start,end) == 0){
@@ -314,12 +308,10 @@ public class Frequencer implements FrequencerInterface{
     								//この時のkは、StartIndexである。
     	//						}
     	//					 }
-    	//
-    	//
 
         for( int k=0 ; k < mySpace.length ; k++ ){
             if( targetCompare(k,start,end) == 0 ){ //最初に一致したところがstartIndex
-                System.out.println("start k =" + k);
+                // System.out.println("start k =" + k);
                 return k;
             }
         }
@@ -339,7 +331,7 @@ public class Frequencer implements FrequencerInterface{
         //
         for( int k=mySpace.length-1 ;k>=0 ;k-- ){ // リストの下からターゲットが一致するかどうかを確認していく
             if( targetCompare(k,start,end) == 0 ){ //最初に一致したところがendtIndex
-                System.out.println("end k =" + k);
+                // System.out.println("end k =" + k);
                 return k+1; // 下から見に行っているからendIndexに+1すると合わなくなったところになる
             }
         }
