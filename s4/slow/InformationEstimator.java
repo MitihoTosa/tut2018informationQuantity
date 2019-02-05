@@ -1,4 +1,4 @@
-package s4.slow; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID. 
+package s4.slow; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID.
 import java.lang.*;
 import s4.specification.*;
 
@@ -11,8 +11,8 @@ public interface InformationEstimatorInterface{
 // It returns Double.MAX_VALUE, when the true value is infinite.
 // The behavior is undefined, if the true value is finete but larger than Double.MAX_VALUE.
 // Note that this happens only when the space is unreasonably large. We will encounter other problem anyway.
-// Otherwise, estimation of information quantity, 
-}                        
+// Otherwise, estimation of information quantity,
+}
 */
 
 public class InformationEstimator implements InformationEstimatorInterface{
@@ -37,9 +37,9 @@ public class InformationEstimator implements InformationEstimatorInterface{
     }
 
     public void setTarget(byte [] target) { myTarget = target; if(target.length>0) targetReady = true;}
-    public void setSpace(byte []space) { 
+    public void setSpace(byte []space) {
 	myFrequencer = new Frequencer();
-	mySpace = space; myFrequencer.setSpace(space); 
+	mySpace = space; myFrequencer.setSpace(space);
 	spaceReady = true;
     }
 
@@ -73,7 +73,7 @@ public class InformationEstimator implements InformationEstimatorInterface{
 	    while(start<myTarget.length) {
 		// System.out.write(myTarget[end]);
 		end++;;
-		while(partition[end] == false) { 
+		while(partition[end] == false) {
 		    // System.out.write(myTarget[end]);
 		    end++;
 		}
@@ -112,8 +112,8 @@ public class InformationEstimator implements InformationEstimatorInterface{
 	System.out.println(">00 "+value);
     }
 }
-				  
-			       
 
-	
+
+
+
     

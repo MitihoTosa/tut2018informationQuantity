@@ -1,4 +1,4 @@
-package s4; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID.
+package s4.B183333; // Please modify to s4.Bnnnnnn, where nnnnnn is your student ID.
 import s4.specification.FrequencerInterface;
 /*
 
@@ -138,13 +138,11 @@ public class Frequencer implements FrequencerInterface{
 
     	// Example of dictionary order
 
-
     	// "i"      <  "o"        : compare by code
     	// "Hi"     <  "Ho"       ; if head is same, compare the next element
     	// "Ho"     <  "Ho "      ; if the prefix is identical, longer string is big
     	//
     	// ****  Please write code here... ***
-
 
     }
     public void setSpace(byte []space) {
@@ -275,7 +273,6 @@ public class Frequencer implements FrequencerInterface{
 
         return 0;
 
-
     }
     private int subByteStartIndex(int start, int end) {
 
@@ -318,10 +315,7 @@ public class Frequencer implements FrequencerInterface{
     	//						}
     	//					 }
     	//
-
     	//
-
-
 
         for( int k=0 ; k < mySpace.length ; k++ ){
             if( targetCompare(k,start,end) == 0 ){ //最初に一致したところがstartIndex
@@ -331,9 +325,6 @@ public class Frequencer implements FrequencerInterface{
         }
 
         return -1; //
-
-
-
 
         //return startIndex;
     }
@@ -346,10 +337,10 @@ public class Frequencer implements FrequencerInterface{
         //
         // ****  Please write code here... ***
         //
-        for( int k=0 ; k < mySpace.length ; k++ ){
-            if( targetCompare(k,start,end) == 1 ){ //最初に一致したところがstartIndex
+        for( int k=mySpace.length-1 ;k>=0 ;k-- ){ // リストの下からターゲットが一致するかどうかを確認していく
+            if( targetCompare(k,start,end) == 0 ){ //最初に一致したところがendtIndex
                 System.out.println("end k =" + k);
-                return k;
+                return k+1; // 下から見に行っているからendIndexに+1すると合わなくなったところになる
             }
         }
 
@@ -369,8 +360,6 @@ public class Frequencer implements FrequencerInterface{
             if(abort == false) { count++; }
         }
         */
-
-
 
         int first = subByteStartIndex(start, end);
         int last1 = subByteEndIndex(start, end);
